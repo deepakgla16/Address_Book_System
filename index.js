@@ -75,7 +75,6 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
 contactDetails('Bhupesh', 'kumar', 'Home', 'Uttar Pradesh', 'Mathura', "281001", 'bhupesh@gmail.com', "9876543210");
 console.log(addressBook);
 
-
 //UC4
 
 //method to find and editContacts
