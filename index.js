@@ -75,6 +75,7 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
 contactDetails('Bhupesh', 'kumar', 'Home', 'Uttar Pradesh', 'Mathura', "281001", 'bhupesh@gmail.com', "9876543210");
 console.log(addressBook);
 
+
 //UC4
 
 //method to find and editContacts
@@ -137,3 +138,14 @@ function numberOfContacts(){
 }
 
 console.log("Total number of contacts inside address book is : "+numberOfContacts());
+
+// UC7
+
+//method for Duplicate Check Function
+function isDuplicate(firstName) {
+    // Filter matching names
+    let duplicates = addressBook.filter(contact => contact.firstName === firstName);
+    // Reduce to count duplicates
+    let duplicateCount = duplicates.reduce((count) => count + 1, 0);
+    return duplicateCount > 0;
+}
