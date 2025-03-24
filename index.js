@@ -71,6 +71,7 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
     }   
 }
 
+
 //UC3 
 contactDetails('Bhupesh', 'kumar', 'Home', 'Uttar Pradesh', 'Mathura', "281001", 'bhupesh@gmail.com', "9876543210");
 console.log(addressBook);
@@ -199,4 +200,18 @@ function countContactInCity_State(choice , name){
     }else{
         console.log("Provide Right City or State Name");
     }
+}
+//UC 11
+
+//sorting contacts by name
+function sortContact(choice){
+    console.log(addressBook.sort((newContact1,newContact2) => {
+        if(newContact1.firstName < newContact2.firstName){
+            return -1;
+        }else if(newContact1.firstName == newContact2.firstName){
+            return 0;
+        }else{
+            return 1;
+        }
+    }));
 }
