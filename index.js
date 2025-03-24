@@ -75,6 +75,7 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
 contactDetails('Bhupesh', 'kumar', 'Home', 'Uttar Pradesh', 'Mathura', "281001", 'bhupesh@gmail.com', "9876543210");
 console.log(addressBook);
 
+
 //UC4
 
 //method to find and editContacts
@@ -112,5 +113,20 @@ function editContact(findName,editedVariable,variableNewValue){
                 }
             }
         })
+    }
+}
+//UC5
+
+//method to delete
+function deleteContact(first_Name){
+    if(addressBook.length == null){
+        console.log("Add Contact In Address Book");
+    }else{
+        for(let i = 0; i <addressBook.length ; i++){
+            if(addressBook[i].firstName == first_Name){
+                addressBook.splice(i,1);
+                console.log("Contact Deleted Successfully");
+            }
+        }
     }
 }
