@@ -75,7 +75,6 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
 contactDetails('Bhupesh', 'kumar', 'Home', 'Uttar Pradesh', 'Mathura', "281001", 'bhupesh@gmail.com', "9876543210");
 console.log(addressBook);
 
-
 //UC4
 
 //method to find and editContacts
@@ -130,3 +129,11 @@ function deleteContact(first_Name){
         }
     }
 }
+//UC 6
+
+//creating a function to calculate number of contacts in addressbook using reduce() method
+function numberOfContacts(){
+    return addressBook.reduce((total)=>total+1, 0);
+}
+
+console.log("Total number of contacts inside address book is : "+numberOfContacts());
